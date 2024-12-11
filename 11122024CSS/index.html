@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Uygulama Etiketleri</title>
+    <style>
+        /*resetleme kodları*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*id düzenleme kodları*/
+        #galeri{
+            padding: 20px;/*iç boşluk*/
+            display: flex;/*içindeki nesneler filex(esnek) oldu*/
+            flex-wrap: wrap;/*taşan nesneleri aşağı atar*/
+           /* justify-content: center;/*aşağı atılan nesnelerin konumu*/
+            background-color: #333;/*nesne arkaplan rengi*/
+            width: 900px;
+            gap: 15px;/*nesneler arası boşluk*/
+            margin: 0 auto;/*yukarıdan aşağıdan 0 sağdan sola auto*/
+        }
+
+        /*galeri içinde img*/
+        #galeri img{
+            width:calc(830px/3);/*genişlik verir*//*calc otomatik nesneleri hesaplar ve yerleştirir*/
+            opacity: 0.5;/*0-1 arasında verilir.opaklık*/
+            transition: 300ms all;/*galeri img galeri img hover geçerken 300ms olacak*//*300ms animasyon yapsın*/
+        }
+
+        /*sözde sınıf*//*sözde seçiçiler*/
+        #galeri img:hover{
+            /*nesnenin üstüne gelince opaklık 1 olacak*/opacity: 1;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Flex Uygulaması</h1>
+    <div id="galeri">
+        <img src="https://picsum.photos/id/237/280/200" alt="...">
+        <img src="https://picsum.photos/id/237/280/200" alt="...">
+        <img src="https://picsum.photos/id/237/280/200" alt="...">
+        <img src="https://picsum.photos/id/237/280/200" alt="...">
+        <img src="https://picsum.photos/id/237/280/200" alt="...">
+        <img src="https://picsum.photos/id/237/280/200" alt="...">
+        <img src="https://picsum.photos/id/237/280/200" alt="...">
+
+    </div>
+</body>
+</html>
